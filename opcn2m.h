@@ -65,18 +65,7 @@ float OPCN2::_calculate_float(byte val0, byte val1, byte val2, byte val3)
 uint32_t OPCN2::_32bit_int(byte val0, byte val1, byte val2, byte val3)
 {
   // Return a 32-bit unsigned int from 4 bytes
-  //return ((val3 << 24) | (val2 << 16) | (val1 << 8) | val0);
-  
-  uint32_t val  = 0;
-  val = val + val0;
-  val << 8;
-  val = val + val1;
-  val << 8;
-  val = val + val2;
-  val << 8;
-  val = val + val3;
-
-  return val;
+  return ((val3 << 24) | (val2 << 16) | (val1 << 8) | val0);
 }
 
 bool OPCN2::ping()
